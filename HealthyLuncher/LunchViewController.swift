@@ -15,6 +15,7 @@ class LunchViewController: UIViewController {
     @IBOutlet weak var photoBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var predictionView: UIView!
     
+    /// Service for classification of images.
     private let classificationService = ImageClassificationService()
     
     private lazy var imagePickerController: UIImagePickerController = {

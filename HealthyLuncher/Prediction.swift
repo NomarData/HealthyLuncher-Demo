@@ -6,12 +6,24 @@
 //  Copyright © 2018 Netguru. All rights reserved.
 //
 
+/// Types of a prediction result.
 enum Prediction {
+    
+    /// Healthy lunch.
     case healthy
+    
+    /// Fast food lunch.
     case fastFood
+    
+    /// Classification has failed with an error.
     case failed(Error?)
+    
+    /// Prediction result is empty.
     case empty
     
+    /// Initializes the prediction enum with result returned from a ML model.
+    ///
+    /// - Parameter classLabel: The identifier returned by a model.
    init?(classLabel: String) {
         if classLabel == "fast food" {
             self = .fastFood
@@ -22,6 +34,7 @@ enum Prediction {
         }
     }
     
+    /// The description of a prediction used for showing the information to the user.
     var description: String {
         switch self {
         case .healthy:

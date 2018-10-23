@@ -10,8 +10,10 @@ import UIKit
 import CoreML
 import Vision
 
+/// Service used for performing a classification of images by a ML model.
 final class ImageClassificationService {
     
+    /// Handler for returning classification result.
     var completionHandler: ((Prediction) -> ())?
     
     private lazy var classificationRequest: VNCoreMLRequest = {
@@ -27,6 +29,9 @@ final class ImageClassificationService {
         }
     }()
     
+    /// Predict the result of image classification.
+    ///
+    /// - Parameter image: Image to classify.
     func predict(for image: UIImage) {
         let orientation = CGImagePropertyOrientation(image.imageOrientation)
         guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
@@ -41,7 +46,7 @@ final class ImageClassificationService {
         }
     }
     
-    func handleClassifications(for request: VNRequest, error: Error?) {
+    private func handleClassifications(for request: VNRequest, error: Error?) {
         guard let results = request.results else {
             self.completionHandler?(Prediction.failed(error))
             return
