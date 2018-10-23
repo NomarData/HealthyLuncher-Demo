@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951D14BE217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D14BD217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		951D14C0217F7FB900DA50E3 /* ImageClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D14BF217F7FB900DA50E3 /* ImageClassificationService.swift */; };
 		95226D80217A00BD00C58139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D7F217A00BD00C58139 /* AppDelegate.swift */; };
-		95226D82217A00BD00C58139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D81217A00BD00C58139 /* ViewController.swift */; };
+		95226D82217A00BD00C58139 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D81217A00BD00C58139 /* LunchViewController.swift */; };
 		95226D85217A00BD00C58139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95226D83217A00BD00C58139 /* Main.storyboard */; };
 		95226D87217A00C000C58139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95226D86217A00C000C58139 /* Assets.xcassets */; };
 		95226D8A217A00C000C58139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95226D88217A00C000C58139 /* LaunchScreen.storyboard */; };
+		95226D94217A169E00C58139 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D93217A169E00C58139 /* Prediction.swift */; };
+		95226D98217A17A700C58139 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95226D97217A17A700C58139 /* ImageClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951D14BD217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		951D14BF217F7FB900DA50E3 /* ImageClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationService.swift; sourceTree = "<group>"; };
 		95226D7C217A00BD00C58139 /* HealthyLuncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyLuncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95226D7F217A00BD00C58139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95226D81217A00BD00C58139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95226D81217A00BD00C58139 /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
 		95226D84217A00BD00C58139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95226D86217A00C000C58139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95226D89217A00C000C58139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95226D8B217A00C000C58139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95226D93217A169E00C58139 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		95226D97217A17A700C58139 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				95226D7F217A00BD00C58139 /* AppDelegate.swift */,
-				95226D81217A00BD00C58139 /* ViewController.swift */,
+				95226D81217A00BD00C58139 /* LunchViewController.swift */,
+				95226D93217A169E00C58139 /* Prediction.swift */,
+				951D14BF217F7FB900DA50E3 /* ImageClassificationService.swift */,
+				951D14BD217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				95226D97217A17A700C58139 /* ImageClassifier.mlmodel */,
 				95226D83217A00BD00C58139 /* Main.storyboard */,
 				95226D86217A00C000C58139 /* Assets.xcassets */,
 				95226D88217A00C000C58139 /* LaunchScreen.storyboard */,
@@ -135,8 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95226D82217A00BD00C58139 /* ViewController.swift in Sources */,
+				951D14C0217F7FB900DA50E3 /* ImageClassificationService.swift in Sources */,
+				95226D98217A17A700C58139 /* ImageClassifier.mlmodel in Sources */,
+				95226D94217A169E00C58139 /* Prediction.swift in Sources */,
+				95226D82217A00BD00C58139 /* LunchViewController.swift in Sources */,
 				95226D80217A00BD00C58139 /* AppDelegate.swift in Sources */,
+				951D14BE217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
