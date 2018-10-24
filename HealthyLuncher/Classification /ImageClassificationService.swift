@@ -18,7 +18,7 @@ final class ImageClassificationService {
     
     private lazy var classificationRequest: VNCoreMLRequest = {
         do {
-            let model = try VNCoreMLModel(for: ImageClassifier().model)
+            let model = try VNCoreMLModel(for: LunchImageClassifier().model)
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.handleClassifications(for: request, error: error)
             })

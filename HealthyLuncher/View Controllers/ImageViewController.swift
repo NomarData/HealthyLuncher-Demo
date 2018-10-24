@@ -1,5 +1,5 @@
 //
-//  LunchViewController.swift
+//  ImageViewController.swift
 //  HealthyLuncher
 //
 //  Created by Anna on 19/10/2018.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class LunchViewController: UIViewController {
+class ImageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var predictionLabel: UILabel!
-    @IBOutlet weak var photoBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var predictionView: UIView!
     
     /// Service for classification of images.
@@ -51,7 +50,7 @@ class LunchViewController: UIViewController {
     }
 }
 
-extension LunchViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
@@ -62,4 +61,3 @@ extension LunchViewController: UIImagePickerControllerDelegate, UINavigationCont
         classificationService.predict(for: image)
     }
 }
-
