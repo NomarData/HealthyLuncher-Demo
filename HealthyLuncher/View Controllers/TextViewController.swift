@@ -14,7 +14,17 @@ class TextViewController: UIViewController {
     @IBOutlet weak var predictLabel: UILabel!
     @IBOutlet weak var lunchTextField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        lunchTextField.delegate = self
+    }
+    
     @IBAction func checkLunchText(_ sender: Any) {
+        checkLunch()
+    }
+    
+    private func checkLunch() {
         predictLabel.textColor = .lightGray
         guard let text = lunchTextField.text, !text.isEmpty else {
             predictLabel.text = "Text can not be empty 🤨"
@@ -43,5 +53,13 @@ class TextViewController: UIViewController {
         } catch {
             fatalError("Failed to load Text Classifier ML model: \(error)")
         }
+    }
+}
+
+extension TextViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        lunchTextField.resignFirstResponder()
+        checkLunch()
+        return true
     }
 }
