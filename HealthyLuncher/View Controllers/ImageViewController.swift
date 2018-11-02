@@ -45,7 +45,7 @@ class ImageViewController: UIViewController {
         case .fastFood:
             predictionLabel.textColor = #colorLiteral(red: 0.9815813899, green: 0.01640440524, blue: 0.2419521809, alpha: 1)
         case .failed(_), .empty:
-            predictionLabel.textColor = .darkGray
+            predictionLabel.textColor = .lightGray
         }
     }
 }
