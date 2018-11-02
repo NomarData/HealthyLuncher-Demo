@@ -6,6 +6,8 @@
 //  Copyright © 2018 Netguru. All rights reserved.
 //
 
+import UIKit
+
 /// Types of a prediction result.
 enum Prediction {
     
@@ -47,6 +49,18 @@ enum Prediction {
             return text + ":\n" + error.localizedDescription
         case .empty:
             return "Nothing was recognized 😯"
+        }
+    }
+    
+    /// The color associated with prediction value.
+    var color: UIColor {
+        switch self {
+        case .healthy:
+            return #colorLiteral(red: 0.3371219039, green: 0.7178928256, blue: 0.09001944214, alpha: 1)
+        case .fastFood:
+            return #colorLiteral(red: 0.9815813899, green: 0.01640440524, blue: 0.2419521809, alpha: 1)
+        case .failed(_), .empty:
+            return .lightGray
         }
     }
 }

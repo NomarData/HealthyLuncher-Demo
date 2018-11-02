@@ -21,19 +21,15 @@ class TextViewController: UIViewController {
     }
     
     @IBAction func checkLunchText(_ sender: Any) {
-        checkLunch()
+        predictLunch()
     }
     
-    private func checkLunch() {
+    private func predictLunch() {
         predictLabel.textColor = .lightGray
         guard let text = lunchTextField.text, !text.isEmpty else {
             predictLabel.text = "Text can not be empty 🤨"
             return
         }
-        predict(for: text)
-    }
-    
-    private func predict(for text: String) {
         do {
             let model = try NLModel(mlModel: LunchTextClassifier().model)
             guard let classLabel = model.predictedLabel(for: text),
@@ -42,14 +38,7 @@ class TextViewController: UIViewController {
                     return
             }
             predictLabel.text = prediction.description
-            switch prediction {
-            case .healthy:
-                predictLabel.textColor = #colorLiteral(red: 0.3371219039, green: 0.7178928256, blue: 0.09001944214, alpha: 1)
-            case .fastFood:
-                predictLabel.textColor = #colorLiteral(red: 0.9815813899, green: 0.01640440524, blue: 0.2419521809, alpha: 1)
-            default:
-                predictLabel.textColor = .lightGray
-            }
+            predictLabel.textColor = prediction.color
         } catch {
             fatalError("Failed to load Text Classifier ML model: \(error)")
         }
@@ -59,7 +48,7 @@ class TextViewController: UIViewController {
 extension TextViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         lunchTextField.resignFirstResponder()
-        checkLunch()
+        predictLunch()
         return true
     }
 }

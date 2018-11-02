@@ -39,14 +39,7 @@ class ImageViewController: UIViewController {
     
     func updatePredictionLabel(with prediction: Prediction) {
         predictionLabel.text = prediction.description
-        switch prediction {
-        case .healthy:
-            predictionLabel.textColor = #colorLiteral(red: 0.3371219039, green: 0.7178928256, blue: 0.09001944214, alpha: 1)
-        case .fastFood:
-            predictionLabel.textColor = #colorLiteral(red: 0.9815813899, green: 0.01640440524, blue: 0.2419521809, alpha: 1)
-        case .failed(_), .empty:
-            predictionLabel.textColor = .lightGray
-        }
+        predictionLabel.textColor = prediction.color
     }
 }
 
