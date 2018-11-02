@@ -10,8 +10,8 @@ import UIKit
 import NaturalLanguage
 
 class TextViewController: UIViewController {
-    
-    @IBOutlet weak var predictLabel: UILabel!
+
+    @IBOutlet weak var predictionLabel: UILabel!
     @IBOutlet weak var lunchTextField: UITextField!
     
     override func viewDidLoad() {
@@ -25,20 +25,20 @@ class TextViewController: UIViewController {
     }
     
     private func predictLunch() {
-        predictLabel.textColor = .lightGray
+        predictionLabel.textColor = .lightGray
         guard let text = lunchTextField.text, !text.isEmpty else {
-            predictLabel.text = "Text can not be empty 🤨"
+            predictionLabel.text = "Text can not be empty 🤨"
             return
         }
         do {
             let model = try NLModel(mlModel: LunchTextClassifier().model)
             guard let classLabel = model.predictedLabel(for: text),
                 let prediction = Prediction(classLabel: classLabel) else {
-                    predictLabel.text = Prediction.empty.description
+                    predictionLabel.text = Prediction.empty.description
                     return
             }
-            predictLabel.text = prediction.description
-            predictLabel.textColor = prediction.color
+            predictionLabel.text = prediction.description
+            predictionLabel.textColor = prediction.color
         } catch {
             fatalError("Failed to load Text Classifier ML model: \(error)")
         }

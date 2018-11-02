@@ -148,7 +148,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lunchTextField" destination="EPI-SZ-LYq" id="5DI-vQ-Jnl"/>
-                        <outlet property="predictLabel" destination="ehJ-ZZ-61y" id="qfo-ON-fi5"/>
+                        <outlet property="predictionLabel" destination="ehJ-ZZ-61y" id="yH3-dT-tiV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIY-cI-CSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,7 +219,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="checkDataTable:" destination="cOX-UA-bk1" eventType="touchUpInside" id="jcq-do-Dgl"/>
+                                    <action selector="checkLunchDataTable:" destination="cOX-UA-bk1" eventType="touchUpInside" id="S6s-ao-g8Z"/>
                                     <action selector="checkLunchText:" destination="Rzx-HK-M9M" eventType="touchUpInside" id="hth-fI-hOQ"/>
                                     <action selector="openPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18X-Wc-hAJ"/>
                                 </connections>
@@ -262,7 +262,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nameTextField" destination="Hul-mB-mz1" id="HNW-9u-yaR"/>
-                        <outlet property="predictLabel" destination="YVY-kn-Lhl" id="bix-Uh-wel"/>
+                        <outlet property="predictionLabel" destination="YVY-kn-Lhl" id="2Ct-Ah-jCM"/>
                         <outlet property="priceTextField" destination="SVg-VC-VhV" id="pKK-JB-BpT"/>
                         <outlet property="producentTextField" destination="Jy3-mJ-6Re" id="nFS-Cd-94W"/>
                     </connections>
