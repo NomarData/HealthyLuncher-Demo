@@ -61,14 +61,14 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
-		951D14C2217F8B1100DA50E3 /* Classification  */ = {
+		951D14C2217F8B1100DA50E3 /* Classification */ = {
 			isa = PBXGroup;
 			children = (
 				953473CB2180CD0600259553 /* Models */,
 				95226D93217A169E00C58139 /* Prediction.swift */,
 				951D14BF217F7FB900DA50E3 /* ImageClassificationService.swift */,
 			);
-			path = "Classification ";
+			path = Classification;
 			sourceTree = "<group>";
 		};
 		951D14C3217F8B3000DA50E3 /* Extensions */ = {
@@ -101,7 +101,7 @@
 				95226D7F217A00BD00C58139 /* AppDelegate.swift */,
 				95226D83217A00BD00C58139 /* Main.storyboard */,
 				953473CE2180CD1D00259553 /* View Controllers */,
-				951D14C2217F8B1100DA50E3 /* Classification  */,
+				951D14C2217F8B1100DA50E3 /* Classification */,
 				951D14C3217F8B3000DA50E3 /* Extensions */,
 				951D14C1217F8AD400DA50E3 /* Supporting files */,
 			);
