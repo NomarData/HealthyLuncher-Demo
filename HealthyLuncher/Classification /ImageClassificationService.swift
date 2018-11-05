@@ -35,7 +35,6 @@ final class ImageClassificationService {
     func predict(for image: UIImage) {
         let orientation = CGImagePropertyOrientation(image.imageOrientation)
         guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
-        
         DispatchQueue.global(qos: .userInitiated).async {
             let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
             do {
@@ -48,15 +47,15 @@ final class ImageClassificationService {
     
     private func handleClassifications(for request: VNRequest, error: Error?) {
         guard let results = request.results else {
-            self.completionHandler?(Prediction.failed(error))
+           completionHandler?(Prediction.failed(error))
             return
         }
         guard let classifications = results as? [VNClassificationObservation],
             let bestClassification = classifications.first,
             let prediction = Prediction(classLabel: bestClassification.identifier) else {
-                self.completionHandler?(Prediction.empty)
+                completionHandler?(Prediction.empty)
                 return
         }
-        self.completionHandler?(prediction)
+        completionHandler?(prediction)
     }
 }
