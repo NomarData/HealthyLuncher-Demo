@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951D14BE217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D14BD217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		951D14C0217F7FB900DA50E3 /* ImageClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D14BF217F7FB900DA50E3 /* ImageClassificationService.swift */; };
 		95226D80217A00BD00C58139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D7F217A00BD00C58139 /* AppDelegate.swift */; };
-		95226D82217A00BD00C58139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D81217A00BD00C58139 /* ViewController.swift */; };
+		95226D82217A00BD00C58139 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D81217A00BD00C58139 /* ImageViewController.swift */; };
 		95226D85217A00BD00C58139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95226D83217A00BD00C58139 /* Main.storyboard */; };
 		95226D87217A00C000C58139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95226D86217A00C000C58139 /* Assets.xcassets */; };
 		95226D8A217A00C000C58139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95226D88217A00C000C58139 /* LaunchScreen.storyboard */; };
+		95226D94217A169E00C58139 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95226D93217A169E00C58139 /* Prediction.swift */; };
+		953473AA2180ACCD00259553 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953473A92180ACCD00259553 /* TextViewController.swift */; };
+		953473C82180C48800259553 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953473C72180C48800259553 /* DataTableViewController.swift */; };
+		953473D02180CDDD00259553 /* LunchImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 953473CF2180CDDD00259553 /* LunchImageClassifier.mlmodel */; };
+		953473D12180CDF000259553 /* LunchDataTableClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 953473CC2180CD0D00259553 /* LunchDataTableClassifier.mlmodel */; };
+		953473D22180CDF200259553 /* LunchTextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 953473CD2180CD0D00259553 /* LunchTextClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951D14BD217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		951D14BF217F7FB900DA50E3 /* ImageClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationService.swift; sourceTree = "<group>"; };
 		95226D7C217A00BD00C58139 /* HealthyLuncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyLuncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95226D7F217A00BD00C58139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95226D81217A00BD00C58139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95226D81217A00BD00C58139 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		95226D84217A00BD00C58139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95226D86217A00C000C58139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95226D89217A00C000C58139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95226D8B217A00C000C58139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95226D93217A169E00C58139 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		953473A92180ACCD00259553 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		953473C72180C48800259553 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		953473CC2180CD0D00259553 /* LunchDataTableClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LunchDataTableClassifier.mlmodel; sourceTree = "<group>"; };
+		953473CD2180CD0D00259553 /* LunchTextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LunchTextClassifier.mlmodel; sourceTree = "<group>"; };
+		953473CF2180CDDD00259553 /* LunchImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LunchImageClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +51,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		951D14C1217F8AD400DA50E3 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				95226D8B217A00C000C58139 /* Info.plist */,
+				95226D88217A00C000C58139 /* LaunchScreen.storyboard */,
+				95226D86217A00C000C58139 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		951D14C2217F8B1100DA50E3 /* Classification */ = {
+			isa = PBXGroup;
+			children = (
+				953473CB2180CD0600259553 /* Models */,
+				95226D93217A169E00C58139 /* Prediction.swift */,
+				951D14BF217F7FB900DA50E3 /* ImageClassificationService.swift */,
+			);
+			path = Classification;
+			sourceTree = "<group>";
+		};
+		951D14C3217F8B3000DA50E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				951D14BD217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		95226D73217A00BD00C58139 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +99,33 @@
 			isa = PBXGroup;
 			children = (
 				95226D7F217A00BD00C58139 /* AppDelegate.swift */,
-				95226D81217A00BD00C58139 /* ViewController.swift */,
 				95226D83217A00BD00C58139 /* Main.storyboard */,
-				95226D86217A00C000C58139 /* Assets.xcassets */,
-				95226D88217A00C000C58139 /* LaunchScreen.storyboard */,
-				95226D8B217A00C000C58139 /* Info.plist */,
+				953473CE2180CD1D00259553 /* View Controllers */,
+				951D14C2217F8B1100DA50E3 /* Classification */,
+				951D14C3217F8B3000DA50E3 /* Extensions */,
+				951D14C1217F8AD400DA50E3 /* Supporting files */,
 			);
 			path = HealthyLuncher;
+			sourceTree = "<group>";
+		};
+		953473CB2180CD0600259553 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				953473CF2180CDDD00259553 /* LunchImageClassifier.mlmodel */,
+				953473CC2180CD0D00259553 /* LunchDataTableClassifier.mlmodel */,
+				953473CD2180CD0D00259553 /* LunchTextClassifier.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		953473CE2180CD1D00259553 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95226D81217A00BD00C58139 /* ImageViewController.swift */,
+				953473A92180ACCD00259553 /* TextViewController.swift */,
+				953473C72180C48800259553 /* DataTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95226D82217A00BD00C58139 /* ViewController.swift in Sources */,
+				951D14C0217F7FB900DA50E3 /* ImageClassificationService.swift in Sources */,
+				953473D22180CDF200259553 /* LunchTextClassifier.mlmodel in Sources */,
+				953473C82180C48800259553 /* DataTableViewController.swift in Sources */,
+				95226D94217A169E00C58139 /* Prediction.swift in Sources */,
+				95226D82217A00BD00C58139 /* ImageViewController.swift in Sources */,
 				95226D80217A00BD00C58139 /* AppDelegate.swift in Sources */,
+				951D14BE217F7C0400DA50E3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				953473D02180CDDD00259553 /* LunchImageClassifier.mlmodel in Sources */,
+				953473D12180CDF000259553 /* LunchDataTableClassifier.mlmodel in Sources */,
+				953473AA2180ACCD00259553 /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,15 +354,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9HJ69C5G9K;
-				INFOPLIST_FILE = HealthyLuncher/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "HealthyLuncher/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.netguru.HealthyLuncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,15 +373,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9HJ69C5G9K;
-				INFOPLIST_FILE = HealthyLuncher/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "HealthyLuncher/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.netguru.HealthyLuncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
