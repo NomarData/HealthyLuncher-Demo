@@ -47,7 +47,7 @@ final class ImageClassificationService {
     
     private func handleClassifications(for request: VNRequest, error: Error?) {
         guard let results = request.results else {
-           completionHandler?(Prediction.failed(error))
+            completionHandler?(Prediction.failed(error))
             return
         }
         guard let classifications = results as? [VNClassificationObservation],

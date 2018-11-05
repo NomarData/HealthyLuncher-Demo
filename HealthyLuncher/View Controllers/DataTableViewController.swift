@@ -24,9 +24,8 @@ class DataTableViewController: UIViewController {
         })
     }
     
-    
     @IBAction func checkLunchDataTable(_ sender: Any) {
-       predictLunch()
+        predictLunch()
     }
     
     private func predictLunch() {
