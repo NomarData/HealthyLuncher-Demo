@@ -1,6 +1,6 @@
 # HealthyLuncher-Demo
 
-*HealthyLuncher* was created as a demo project for a **CreateML blogpost**. 
+*HealthyLuncher* was created as a demo project for a [**CreateML blogpost**](https://www.netguru.co/codestories/createml-start-your-adventure-in-machine-learning-with-swift). 
 It uses:
 - **CoreML**
 - **NaturalLanguage**
